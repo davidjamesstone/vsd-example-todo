@@ -1,0 +1,68 @@
+{
+  "name": "My routes",
+  "description": "My routes for application",
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "description": "Home page",
+      "ignore": false,
+      "resource": {
+        "inline": true,
+        "path": "./",
+        "name": ""
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/public/{path*}",
+      "description": "Public directories",
+      "resource": {
+        "inline": true,
+        "path": "./public",
+        "name": ""
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/todo",
+      "description": "Get the list of todos",
+      "ignore": false,
+      "resource": {
+        "inline": true,
+        "path": "./todo",
+        "name": "list"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/todo",
+      "description": "Create a new todo",
+      "resource": {
+        "inline": true,
+        "path": "./todo",
+        "name": "create"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/todo/{id}",
+      "description": "Updates a todo",
+      "resource": {
+        "inline": true,
+        "path": "./todo",
+        "name": "update"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/todo",
+      "description": "Delete a batch of todo id's",
+      "resource": {
+        "inline": true,
+        "path": "./todo",
+        "name": "remove"
+      }
+    }
+  ]
+}

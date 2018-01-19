@@ -1,0 +1,37 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 3003
+  },
+  "db": {
+    "uri": "mongodb://localhost/myapp"
+  },
+  "logging": {
+    "ops": {
+      "interval": 1000
+    },
+    "reporters": {
+      "console": [
+        {
+          "module": "good-squeeze",
+          "name": "Squeeze",
+          "args": [
+            {
+              "log": "*",
+              "request": "*",
+              "response": "*",
+              "error": "*"
+            }
+          ]
+        },
+        {
+          "module": "good-console"
+        },
+        "stdout"
+      ]
+    }
+  },
+  "views": {
+    "cache": true
+  }
+}

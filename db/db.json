@@ -1,0 +1,33 @@
+{
+  "name": "Todos",
+  "description": "Todos data model",
+  "schemas": [
+    {
+      "id": "5455627",
+      "name": "Todo",
+      "description": "Todo collection",
+      "keys": {
+        "items": [
+          {
+            "id": "1194708",
+            "name": "text",
+            "type": "String",
+            "def": {
+              "required": true,
+              "trim": true
+            }
+          },
+          {
+            "id": "2734934",
+            "name": "isCompleted",
+            "type": "Boolean",
+            "def": {
+              "required": true,
+              "defaultValue": false
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
