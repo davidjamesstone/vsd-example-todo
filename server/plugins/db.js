@@ -1,9 +1,5 @@
-const joi = require('joi')
 const mongoose = require('mongoose')
-const objectId = require('joi-objectid')
 const config = require('../../config')
-
-joi.objectId = objectId(joi)
 
 /*
  * Registers the database and
@@ -16,7 +12,7 @@ module.exports = {
       await mongoose.connect(config.db.uri)
       const connection = mongoose.connection
 
-      // Load data model
+      // Ensure data model
       require('../../db')
 
       server.log(['mongoose-connect', 'db'], 'Database connection open')

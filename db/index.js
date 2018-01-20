@@ -1,6 +1,14 @@
 const mongoose = require('mongoose')
+const Joi = require('joi')
 const generator = require('vsd-db-mongoose')(mongoose)
+const objectId = require('joi-objectid')
 const modelData = require('./db.json')
+
+/**
+ * Register objectId on joi
+ * so we can use it in our app
+ */
+Joi.objectId = objectId(Joi)
 
 /**
  * Generate mongoose schema from the data
