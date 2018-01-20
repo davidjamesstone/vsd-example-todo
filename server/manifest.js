@@ -42,12 +42,6 @@ const manifest = {
           }
         }
       },
-      // {
-      //   plugin: 'hapi-mongoose-connect',
-      //   options: {
-      //     mongooseUri: config.db.uri
-      //   }
-      // },
       {
         plugin: 'vsd-plugin-router',
         options: {
